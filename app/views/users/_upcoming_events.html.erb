@@ -1,0 +1,9 @@
+<div class="col-md-4">
+  <h3> Attending Events </h3>
+  <% @upcoming_events.each do |e| %>
+    <p><%= link_to e.title, e %></p>
+    <p><%= e.description %></p>
+    <p><%= e.date %></p>
+    <hr>
+  <% end %>
+</div>

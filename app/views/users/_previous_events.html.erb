@@ -1,0 +1,11 @@
+<div class="col-md-4">
+  <h3> Previous Events </h2>
+  <% unless @previous_events.nil? %>
+    <% @previous_events.each do |e| %>
+      <p><%= link_to e.title, e %></p>
+      <p><%= e.description %></p>
+      <p><%= e.date %></p>
+      <hr>
+    <% end %>
+  <% end %>
+</div>

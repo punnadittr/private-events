@@ -1,13 +1,13 @@
-<% provide(:title, current_user.name) %>
+<% provide(:title, "All Events") %>
 <div class="row">
   <aside class="col-md-4">
     <section class="user_info">
       <h1>
-        <%= current_user.name %>
+        All Events
       </h1>
       <h2><%= link_to "Create New Event", new_event_path %></h3>
     </section>
   </aside>
-  <%= render 'previous_events' %>
+  <%= render 'past_events' %>
   <%= render 'upcoming_events' %>
 </div>

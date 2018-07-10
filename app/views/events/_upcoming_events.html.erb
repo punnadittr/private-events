@@ -1,0 +1,15 @@
+<div class="col-md-4">
+<h3> Upcoming Events </h3>
+  <% @events.upcoming.each do |e| %>
+    <p><%= link_to e.title, e %></p>
+    <p><%= e.description %></p>
+    <p><%= e.date %></p>
+    <p><%= "Created By: #{e.creator.name}" %>
+    <p> Attended By: 
+      <% e.attendees.each do |att| %>
+        <%= link_to att.name, att %>
+      <% end %>
+    </p>
+    <hr>
+  <% end %>
+</div>

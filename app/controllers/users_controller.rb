@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  include UsersHelper
+  
   def new
     @user = User.new
   end
@@ -12,7 +14,9 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find_by(params[:id])
+    @user = User.find_by(id: params[:id])
+    @upcoming_events = upcoming_events(current_user)
+    @previous_events = previous_events(current_user)
   end
 
   private

@@ -1,0 +1,15 @@
+<% provide(:title, @event.title) %>
+<div class="row">
+  <div class="col-md-8">
+    <p><%= "Event Name: #{@event.title}" %></p>
+    <p><%= "Description: #{@event.description}" %></p>
+    <p><%= "Event Date: #{@event.date}" %></p>
+    <p> Attendees:
+    <% @event.attendees.each do |att| %>
+       <%= link_to att.name, att %>
+       /
+    <% end %>
+    <%= link_to "Attend this event", attend_path(:event => @event, :user => current_user), method: :post %>
+    </p>
+  </div>
+</div>

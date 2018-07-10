@@ -2,10 +2,12 @@
 
 one:
   title: MyString
-  content: MyText
-  date: 2018-07-09 10:49:43
+  description: MyText
+  date: 2018-07-09 13:18:06
+  creator_id: 1
 
 two:
   title: MyString
-  content: MyText
-  date: 2018-07-09 10:49:43
+  description: MyText
+  date: 2018-07-09 13:18:06
+  creator_id: 1
